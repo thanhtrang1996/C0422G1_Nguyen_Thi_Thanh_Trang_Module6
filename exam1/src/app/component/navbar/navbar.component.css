@@ -1,0 +1,35 @@
+.avt-navbar {
+  width: 120px;
+}
+
+.btn-pink {
+  background-color: #FF416C;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.btn-basic {
+  background-color: whitesmoke;
+  color: black;
+  padding: 10px;
+  border-radius: 50px;
+}
+.text-pink {
+  color: #FF416C;
+}
+
+.icon-hover {
+  color: grey;
+  padding: 20px;
+}
+
+.avt-nav {
+  width: 50px;
+  border-radius: 50px;
+}
+
+.menu-nav {
+  margin-right: 150px;
+
+}
