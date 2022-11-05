@@ -9,9 +9,10 @@ import {NgxPaginationModule} from "ngx-pagination";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
 import {FooterComponent} from './component/footer/footer.component';
-import {NavbarComponent} from './component/navbar/navbar.component';
 import {Home1Component} from './component/home1/home1.component';
 import { ListSearchComponent } from './component/list-search/list-search.component';
+import { Error404Component } from './component/error404/error404.component';
+import {NavbarComponent} from "./component/navbar/navbar.component";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ListSearchComponent } from './component/list-search/list-search.compone
     NavbarComponent,
     Home1Component,
     ListSearchComponent,
+    Error404Component,
 
   ],
     imports: [

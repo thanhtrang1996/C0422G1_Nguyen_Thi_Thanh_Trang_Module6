@@ -1,126 +1,50 @@
-<!--<body>-->
-<!--<nav class="navbar navbar-expand-lg navbar-light " style="background: #FF445C" >-->
-<!--  <div class="container-fluid">-->
-<!--    <a class="navbar-brandb " style="margin-left: 30px" href="#"><img src="assets\video\Untitled-1.png"-->
-<!--                                                height="60px" width="150px"></a>-->
-<!--    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"-->
-<!--            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--      <span class="navbar-toggler-icon"></span>-->
-<!--    </button>-->
-<!--    <div class="collapse  navbar-collapse" id="navbarNavDropdown">-->
-<!--      <ul class="navbar-nav ">-->
-<!--        <li class="nav-item ">-->
-<!--          <a class="nav-link active text-white btn " style="font-size: 25px;margin-left: 60px" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link text-white me-5  " href="#" style="font-size: 25px;margin-left: 60px"  ><i class="fa-solid fa-users"></i></a>-->
-<!--        </li>-->
-<!--        <li class="nav-item " >-->
-<!--          <a class="nav-link active text-white me-5  "  aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">-->
-<!--            <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15Zm0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>-->
-<!--          </svg></a>-->
-<!--        </li>-->
-<!--        <li class="nav-item dropdown">-->
-<!--          <a class="nav-link dropdown-toggle text-white" style="font-size: 25px"  href="#" id="navbarDropdownMenuLink" role="button"-->
-<!--             data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--            <i class="fa-solid fa-user"></i>-->
-<!--          </a>-->
-<!--          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
-<!--            <li><a class="dropdown-item" href="#">Tuỳ chọn cho người dùng </a></li>-->
-<!--            <li><a class="dropdown-item" href="#">Trang cá nhân</a></li>-->
-<!--            <li><a class="dropdown-item" href="#">Thông tin phản hồi</a></li>-->
-<!--            <li><a class="dropdown-item" href="#">Mật khẩu và thông tin</a></li>-->
-<!--            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>-->
-<!--          </ul>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--      <div class="d-flex">-->
-<!--        <input type="text" style=" border-radius: 10px;height: 40px" placeholder="Tìm kiếm tên" >-->
-<!--        <a class="nav-link text-white" href="#" style="font-size: 20px" ><i-->
-<!--          class="fa-solid fa-magnifying-glass"></i>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--    </div>-->
-
-<!--    <div>-->
-<!--      <div style="background:white;height:50px;width:50px;border-radius: 50%"></div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</nav>-->
-<!--</body>-->
-
-
-<nav class="navbar navbar-expand-lg bg-light shadow p-2">
-  <div class="container">
-    <a class="navbar-brand me-5" href="#">
-      <img class="avt-navbar" src="assets\video\logo-1 (1).png" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<div *ngFor="let u of user"></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #b30217!important;">
+  <div class="container-fluid">
+    <a class="navbar-brandb " style="margin-left: 30px" href="#"><img src="assets\video\Untitled-1.png"
+                                                                      height="60px" width="180px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-lg-0">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <div class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-            <button class="btn btn-light" type="submit">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
-                   viewBox="0 0 16 16">
-                <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-              </svg>
-            </button>
-          </div>
+          <a class="nav-link  text-white " style="font-size: 30px;margin-left: 100px"
+             href="#"><i class="fa-solid fa-house"></i></a>
         </li>
-      </ul>
-      <!--      <a style="text-decoration: none" href="" class="btn-basic fw-bold">-->
-      <!--        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2"-->
-      <!--             viewBox="0 0 16 16">-->
-      <!--          <path-->
-      <!--            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>-->
-      <!--        </svg>-->
-      <!--        Tiếng Việt-->
-      <!--      </a>-->
-      <!--      <a style="text-decoration: none" href="" class="btn-pink fw-bold">Đăng nhập</a>-->
-      <div class="menu-nav">
-        <a href="" class="icon-hover me-5">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-          </svg>
-        </a>
-
-        <a href="" class="icon-hover me-5">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-hearts" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566ZM9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z"/>
-          </svg>
-        </a>
-
-        <a href="" class="icon-hover me-5">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-heart" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.76 2.76 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124c.146.277.329.556.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442c.22-.28.403-.56.55-.836L15 11.105V5.383l-3.002 1.801a2.76 2.76 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1H2Zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
-          </svg>
-        </a>
-      </div>
-
-      <div class="fw-bold">Thanh</div>
-      <ul class="navbar-nav mb-lg-0">
-        <li class="nav-item dropdown ">
-          <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="avt-nav"
-                 src="assets\video\a5.jpg" height="50px" width="50px"
-                 alt="">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" style="font-size: 30px;margin-left: 100px"><i
+            class="fa-solid fa-users"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white "style="font-size: 30px;margin-left: 100px" href="#">
+            <i class="fa-solid fa-comment"></i>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Tuỳ chọn  </a></li>
-                     <li><a class="dropdown-item" href="#">Trang cá nhân</a></li>
-                      <li><a class="dropdown-item" href="#">Thông tin phản hồi</a></li>
-                    <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
-          </ul>
         </li>
       </ul>
+      <div class="d-flex ">
+        <input type="text" class="form-control searchInput  me-2" #name style=" border-radius: 10px;height: 45px;padding: 0 10px;width: 350px;border-color: coral;margin-left: 5px"
+               placeholder="Tìm kiếm tên">
+        <a id ="search"(click)="search(0,name.value)" style="font-size: 20px">
+          <i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+      <div class="d-flex " style="padding-right: 75px" >
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " style="font-size: 25px" id="navbarDropdownMenuLink"
+             role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            <img
+              src="https://img.pingbook.com/picdb/news/091013minam/27.jpg"
+              style="border-radius: 50%; border: 1px solid #a1a1a1; height: 60px; width: 60px;" alt="">
+          </a>
+          <ul class="dropdown-menu " style="background: #ec8c97" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item">Trang cá nhân</a></li>
+            <li><a class="dropdown-item">Thông tin phản hồi</a></li>
+            <li><a class="dropdown-item">Mật khẩu , thông tin</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/share/error']">Đăng xuất</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

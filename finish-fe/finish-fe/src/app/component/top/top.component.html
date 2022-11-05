@@ -1,0 +1,24 @@
+<h1 class="text-center text-info">Danh sách học viên Codegym bị phạt nhiều nhất</h1>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Tên học viên</th>
+    <th>Ngày sinh</th>
+    <th>Email</th>
+    <th>Số điện thoại</th>
+    <th>Tên lỗi phạt</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let hocViens of hocVien  ,index as i">
+    <td>{{i+1}}</td>
+    <td>{{hocViens.ten}}</td>
+    <td>{{hocViens.ngaySinh}}</td>
+    <td>{{hocViens.email}}</td>
+    <td>{{hocViens.soDienThoai}}</td>
+    <td>{{hocViens.phat.ten}}</td>
+  </tr>
+  </tbody>
+</table>
+

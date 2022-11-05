@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {User} from "../../model/user";
+import {UserService} from "../../service/user.service";
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  @Output()keySearch = new EventEmitter();
+  user :User[] =[];
+  constructor(private userService : UserService) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    this.userService.getAllSearchPage(0,"").subscribe(data=>{
+      this.user =data.content;
+    })
+  }
+  search(page:number,name: string) {
+    this.keySearch.emit(name) ;
   }
 
 }

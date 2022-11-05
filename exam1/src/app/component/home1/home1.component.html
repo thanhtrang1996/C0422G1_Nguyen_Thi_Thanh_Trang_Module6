@@ -2,22 +2,22 @@
 <nav class="navbar navbar-light bg-light"  style="background-color:#b30217 !important; padding: 20px 0 20px 0">
   <div class="container-fluid "  >
     <img src="assets/video/Untitled-1.png"  width="200px"alt="" style="margin-left: 40px">
-    <div class="justify-content-end d-flex">
-      <div class="d-flex" style="height: 45px" >
-        <input type="text" style=" border-radius: 10px;height: 45px;padding: 0 10px;width: 350px;border-color: coral;margin-left: 5px" value="Tìm kiếm tên">
-        <input type="text" style=" border-radius: 10px;height: 45px;padding: 0 10px;width: 50px;border-color: coral" value="Tìm">
+    <div >
+      <div class="d-flex ">
+        <input type="text" class="form-control me-2  searchInput" #name style=" border-radius: 10px;height: 45px;padding: 0 10px;width: 350px;border-color: coral;margin-left: 5px" placeholder="Tìm kiếm tên">
+        <div id = "search"  > <a (click)="search(0,name.value)"  style="font-size: 20px" > <i class="fa-solid  fa-magnifying-glass"></i></a></div>
       </div>
     </div>
     <div class="ms-3 " id="logo" style="border-radius: 10px;height: 45px;margin-right: 30px;">
-      <a href="" >Đăng Nhập</a>
+      <a [routerLink]="['/login']" >Đăng Nhập</a>
     </div>
   </div>
 </nav>
 <div class="hero " id="home" >
   <div>
     <div class="row align-items-center">
-      <div class="col-sm-12 col-md-3">
-        <div class="hero-content">
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="hero-content hero-hinh">
           <div> <img src="assets/video/chu.png" height="329" width="480"/>
           </div>
           <div style="margin: 0 0 0 100px">
@@ -32,9 +32,9 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-9 d-none d-md-block text-end ">
-        <div class="hero-image d-flex justify-content-end p-0 ">
-          <img src="assets/video/Untitled-2.png" height="565" width="1000"/>
+      <div class="col-sm-12 col-md-12 col-lg-9 d-none d-md-block text-end ">
+        <div class="hero-image d-flex justify-content-end p-0 ms-3">
+          <img src="assets/video/hinh-nen.png" height="565" width="1000"/>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@
           <div class="service-text">
             <h3>Kết bạn</h3>
             <p>
-              kết bạn năm châu với Line giúp bạn có nhiều niềm vui hơn trong cuộc sống
+              Kết bạn năm châu với Line giúp bạn có nhiều niềm vui hơn trong cuộc sống
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@
           <div class="service-text">
             <h3>Hẹn hò</h3>
             <p>
-              Cơ hội tìm được bạn đời như ý muốn qua chức năng gợi ý hẹn ho
+              Cơ hội tìm được bạn đời như ý muốn qua chức năng gợi ý hẹn hò
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@
           <div class="service-text">
             <h3>Xa hơn nữa</h3>
             <p>
-              Trên tình bạn đến tình yêu , còn đợi gì nữa
+              Từ tình bạn đến tình yêu , còn đợi gì nữa
             </p>
           </div>
         </div>
@@ -103,4 +103,5 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>
 

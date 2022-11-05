@@ -1,0 +1,77 @@
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-xl-9 mx-auto">
+      <div class="card card-signin flex-row my-5">
+        <div class="card-img-left d-none d-md-flex">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title text-center text-danger">Thêm mới học viên</h3>
+          <form class="form-signin" [formGroup]="hocVienForm" *ngIf="hocVienForm" (ngSubmit)="submit()"  >
+            <div class="form-label-group">
+              <label for="name">Tên học viên</label>
+              <input type="text"   id="name" class="form-control"  formControlName="ten">
+            </div>
+            <div class="mb-3 text-danger" *ngIf="hocVienForm.controls.ten.touched &&hocVienForm.controls.ten.hasError('required')">
+              Không được để trống !!!
+            </div>
+            <div class="mb-3 text-danger" *ngIf="hocVienForm.controls.ten.touched &&hocVienForm.controls.ten.hasError('pattern')">
+              Không được nhập ký tự đặc biệt!!!
+            </div>
+            <div class="form-label-group">
+              <label for="Date">Ngày Sinh</label>
+              <input type="date"   id="Date" class="form-control"  formControlName="ngaySinh">
+            </div>
+            <div class="mb-3 text-danger" *ngIf="hocVienForm.controls.ngaySinh.touched &&hocVienForm.controls.ngaySinh.hasError('required')">
+              Không được để trống !!!
+            </div>
+            <div class="form-label-group">
+              <label for="so">Số Điện Thoại</label>
+              <input type="text" id="so" class="form-control"  formControlName="soDienThoai">
+            </div>
+            <div class="mb-3">
+              <div class="text-danger" *ngIf="!soDienThoai.valid && (soDienThoai.dirty || soDienThoai.touched)">
+                <div [hidden]="!soDienThoai.errors.required">Bạn không được để trống !!!</div>
+                <div [hidden]="!soDienThoai.errors.pattern"> Phải nhập đúng định dạng !!!</div>
+              </div>
+            </div>
+            <div class="form-label-group">
+              <label for="email">Email</label>
+              <input type="text" id="email" class="form-control"  formControlName="email">
+            </div>
+            <div class="mb-3">
+              <div class="text-danger" *ngIf="!email.valid && (email.dirty || email.touched)">
+                <div [hidden]="!email.errors.required">Bạn không được để trống !!!</div>
+                <div [hidden]="!email.errors.email">Phải nhập đúng định dạng !!!</div>
+              </div>
+            </div>
+            <div class="form-label-group">
+              <label for="cccd">Số CCCD</label>
+              <input type="text"   id="cccd" class="form-control"  formControlName="cCCD">
+            </div>
+            <div class="mb-3 text-danger" *ngIf="hocVienForm.controls.cCCD.touched &&hocVienForm.controls.cCCD.hasError('required')">
+              Không được để trống !!!
+            </div>
+            <div class="form-label-group" formGroupName="lop">
+              <label for="type">Chọn lớp </label>
+              <select  id="type" formControlName="id" class="form-select" >
+                <option value="" disabled >---Chọn Lớp---</option>
+                <option *ngFor="let type of lopList" [ngValue]="type.id">{{type.ten}}</option>
+              </select>
+            </div>
+            <div class="mb-3 text-danger" *ngIf="hocVienForm.controls.lop.touched &&hocVienForm.controls.lop.hasError('required')">
+              Không được để trống !!!
+            </div>
+
+            <br>
+            <div class="text-center">
+              <button class="btn btn-primary"  >Lưu </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+

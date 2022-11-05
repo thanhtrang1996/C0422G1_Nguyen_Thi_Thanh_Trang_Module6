@@ -1,0 +1,99 @@
+<h1 class="text-center text-info">Danh sách học viên Codegym</h1>
+<a routerLink="/create" class="btn btn-primary  m-2">Thêm mới học viên</a>
+<div class="row p-2">
+  <div class=" col-3 d-flex" >
+    <select [(ngModel)]="name" id=""  class="me-2 form-select">
+      <option value="" disabled> ---Chọn lớp---</option>
+      <option *ngFor=" let lops of lop">{{lops.ten}}</option>
+    </select>
+    <button class="btn btn-success" (click)="search()">Tìm kiếm</button>
+  </div>
+  <div class="col-3">
+    <a routerLink="/top" class="btn btn-primary  m-2">TOP bị phạt</a>
+  </div>
+</div>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Tên học viên</th>
+    <th>Ngày sinh</th>
+    <th>Email</th>
+    <th>CCCD</th>
+    <th>Số điện thoại</th>
+    <th>Tên lớp</th>
+    <th>Chi tiết
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let hocViens of hocVien  ,index as i">
+    <td>{{i+1}}</td>
+    <td>{{hocViens.ten}}</td>
+    <td>{{hocViens.ngaySinh}}</td>
+    <td>{{hocViens.email}}</td>
+    <td>{{hocViens.cCCD}}</td>
+    <td>{{hocViens.soDienThoai}}</td>
+    <td>{{hocViens.lop.ten}}</td>
+    <td>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" (click)="getInfoToModal(hocViens)"
+              data-bs-target="#exampleModal">
+        Chi tiết
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div class="container-fluid mt-3 p-2 d-flex justify-content-center">
+  <ul class="pagination float-end">
+
+    <div *ngIf="page == 0">
+      <li class="page-item disabled">
+        <a class="page-link ">Previous</a>
+      </li>
+    </div>
+    <div *ngIf="page != 0">
+      <li class="page-item">
+        <a class="page-link  btn" (click)="previousPage()">Previous</a>
+      </li>
+    </div>
+    <div>
+      <div>
+        <li class="page-item active">
+          <p class=" numberPage  btn">{{ page + 1 + '/' + totalPages}}</p>
+        </li>
+      </div>
+    </div>
+    <div *ngIf="page == totalPages - 1">
+      <li class="page-item disabled">
+        <button class="page-link btn  ">Next</button>
+      </li>
+    </div>
+    <div *ngIf="page != totalPages - 1">
+      <li class="page-item">
+        <a class="page-link next btn" (click)="nextPage()">Next</a>
+      </li>
+    </div>
+  </ul>
+</div>
+<div *ngIf="hocVien1" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Chi tiết học viên</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Tên học viên {{hocVien1.ten}}</p>
+        <p>Lý do : {{hocVien1.thuong.ten}}</p>
+        <p>Trang thái : {{hocVien1.thuong.trangThai}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Quay lại</button>
+        <button type="button" class="btn btn-primary" (click)="detailHocVien(hocVien1.id)" data-bs-dismiss="modal">Vâng
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

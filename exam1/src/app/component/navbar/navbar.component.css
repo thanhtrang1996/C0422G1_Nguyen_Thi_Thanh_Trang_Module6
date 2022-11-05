@@ -1,35 +1,25 @@
-.avt-navbar {
-  width: 120px;
-}
 
-.btn-pink {
-  background-color: #FF416C;
-  color: white;
-  padding: 10px;
-  border-radius: 50px;
-}
-
-.btn-basic {
-  background-color: whitesmoke;
-  color: black;
-  padding: 10px;
-  border-radius: 50px;
-}
-.text-pink {
-  color: #FF416C;
-}
-
-.icon-hover {
-  color: grey;
-  padding: 20px;
-}
-
-.avt-nav {
+#search {
+  background: #ffffff;
+  border-radius: 10px;
+  height: 45px;
+  padding: 10px 15px 15px 15px;
+  border-color: coral;
   width: 50px;
-  border-radius: 50px;
+  font-weight: bolder;
+  box-shadow: inset 0 0 0 50px #ffffff;
 }
 
-.menu-nav {
-  margin-right: 150px;
+#search a {
+  text-decoration: none;
+}
 
+.dropdown-toggle::after {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .searchInput{
+    width:100% !important;
+  }
 }
