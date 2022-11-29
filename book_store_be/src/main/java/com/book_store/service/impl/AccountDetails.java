@@ -25,17 +25,17 @@ public class AccountDetails implements UserDetails {
     private List<GrantedAuthority> authorities = null;
 
 
-    // This func help you guys get account information to AccountDetailService
-//    public static AccountDetails build(Account account) {
-//        List<GrantedAuthority> authorities = account.getAccountRoles().stream()
-//                .map(role -> new SimpleGrantedAuthority(role.getRole().getRoleName()))
-//                .collect(Collectors.toList());
-//        return new AccountDetails(
-//                account.getIdAccount(),
-//                account.getEmail(),
-//                account.getPassword(),
-//                authorities);
-//    }
+//     This func help you guys get account information to AccountDetailService
+    public static AccountDetails build(Account account) {
+        List<GrantedAuthority> authorities = account.getAccountRoles().stream()
+                .map(role -> new SimpleGrantedAuthority(role.getAppRole().getRole()))
+                .collect(Collectors.toList());
+        return new AccountDetails(
+                account.getId(),
+                account.getEmail(),
+                account.getPassword(),
+                authorities);
+    }
 
     public Integer getId() {
         return id;
